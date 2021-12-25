@@ -33,7 +33,7 @@ namespace Lab15_CS
 			this.button_new_book = new System.Windows.Forms.Button();
 			this.button_new_reader = new System.Windows.Forms.Button();
 			this.button_take_book = new System.Windows.Forms.Button();
-			this.button_game = new System.Windows.Forms.Button();
+			this.button_exit = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
 			// label1
@@ -77,14 +77,15 @@ namespace Lab15_CS
 			this.button_take_book.UseVisualStyleBackColor = true;
 			this.button_take_book.Click += new System.EventHandler(this.Button_take_book_Click);
 			// 
-			// button_game
+			// button_exit
 			// 
-			this.button_game.Location = new System.Drawing.Point(842, 154);
-			this.button_game.Name = "button_game";
-			this.button_game.Size = new System.Drawing.Size(180, 40);
-			this.button_game.TabIndex = 4;
-			this.button_game.Text = "Игра";
-			this.button_game.UseVisualStyleBackColor = true;
+			this.button_exit.Location = new System.Drawing.Point(842, 154);
+			this.button_exit.Name = "button_exit";
+			this.button_exit.Size = new System.Drawing.Size(180, 40);
+			this.button_exit.TabIndex = 4;
+			this.button_exit.Text = "Выход";
+			this.button_exit.UseVisualStyleBackColor = true;
+			this.button_exit.Click += new System.EventHandler(this.Button_exit_Click);
 			// 
 			// Form1
 			// 
@@ -92,7 +93,7 @@ namespace Lab15_CS
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.BackColor = System.Drawing.Color.Lavender;
 			this.ClientSize = new System.Drawing.Size(1265, 292);
-			this.Controls.Add(this.button_game);
+			this.Controls.Add(this.button_exit);
 			this.Controls.Add(this.button_take_book);
 			this.Controls.Add(this.button_new_reader);
 			this.Controls.Add(this.button_new_book);
@@ -115,7 +116,7 @@ namespace Lab15_CS
 		private System.Windows.Forms.Button button_new_book;
 		private System.Windows.Forms.Button button_new_reader;
 		private System.Windows.Forms.Button button_take_book;
-		private System.Windows.Forms.Button button_game;
+		private System.Windows.Forms.Button button_exit;
 	}
 }
 

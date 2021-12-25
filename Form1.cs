@@ -41,5 +41,10 @@ namespace Lab15_CS
 			FormTakeBook formTakeBook = new();
 			formTakeBook.Show();
 		}
+
+		private void Button_exit_Click(object sender, EventArgs e)
+		{
+			Close();
+		}
 	}
 }
