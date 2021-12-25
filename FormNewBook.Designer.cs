@@ -293,9 +293,9 @@ namespace Lab15_CS
 			this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
 			this.label12.Location = new System.Drawing.Point(1011, 316);
 			this.label12.Name = "label12";
-			this.label12.Size = new System.Drawing.Size(69, 25);
+			this.label12.Size = new System.Drawing.Size(184, 25);
 			this.label12.TabIndex = 25;
-			this.label12.Text = "Город";
+			this.label12.Text = "Населённый пункт";
 			// 
 			// textBox7
 			// 
@@ -308,6 +308,7 @@ namespace Lab15_CS
 			// button1
 			// 
 			this.button1.BackColor = System.Drawing.Color.Thistle;
+			this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
 			this.button1.Location = new System.Drawing.Point(686, 456);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(131, 40);
@@ -350,6 +351,7 @@ namespace Lab15_CS
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label1);
 			this.Name = "FormNewBook";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Добавление новой книги";
 			this.ResumeLayout(false);
 			this.PerformLayout();

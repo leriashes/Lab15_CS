@@ -55,7 +55,7 @@ namespace Lab15_CS
 			this.button_new_book.TabIndex = 1;
 			this.button_new_book.Text = "Новая книга";
 			this.button_new_book.UseVisualStyleBackColor = true;
-			this.button_new_book.Click += new System.EventHandler(this.button_new_book_Click);
+			this.button_new_book.Click += new System.EventHandler(this.Button_new_book_Click);
 			// 
 			// button_new_reader
 			// 
@@ -96,6 +96,7 @@ namespace Lab15_CS
 			this.Controls.Add(this.button_new_book);
 			this.Controls.Add(this.label1);
 			this.Name = "Form1";
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Библиотека";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			this.ResumeLayout(false);

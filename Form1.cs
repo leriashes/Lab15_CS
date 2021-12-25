@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,13 +20,13 @@ namespace Lab15_CS
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
-
+			Program.books = new();
 		}
 
-		private void button_new_book_Click(object sender, EventArgs e)
+		private void Button_new_book_Click(object sender, EventArgs e)
 		{
 			FormNewBook formNewBook = new();
-			formNewBook.Show();
+			formNewBook.ShowDialog();
 		}
 	}
 }

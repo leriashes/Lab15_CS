@@ -37,7 +37,14 @@ namespace Lab15_CS
 			Author author = new();
 			if (checkBox1.Checked)
 			{
-				string str = maskedTextBox1.Text.Substring(0, 2) + maskedTextBox1.Text.Substring(3, 2) + maskedTextBox1.Text.Substring(6, 4);
+				string str;
+				if (maskedTextBox1.Text.Length != 10)
+				{
+					maskedTextBox1.Text = "01.01.1990";
+				}
+
+				str = maskedTextBox1.Text.Substring(0, 2) + maskedTextBox1.Text.Substring(3, 2) + maskedTextBox1.Text.Substring(6, 4);
+
 				int[] date = new int[8];
 
 				try
@@ -64,16 +71,87 @@ namespace Lab15_CS
 				int month = date[2] * 10 + date[3];
 				int day = date[0] * 10 + date[1];
 
+				if (year < 1)
+					year = 1900;
+				if (month < 1 || month > 12)
+					month = 1;
+				if (day < 1 || day > 31)
+					day = 1;
+
+				if (textBox3.Text == "")
+					textBox3.Text = "Иванов Иван Иванович";
+
+				if (textBox4.Text == "")
+					textBox4.Text = "Россия";
+
 				author.Init(textBox3.Text, day, month, year, textBox4.Text);
+
+				if (textBox3.Text == "")
+					textBox3.Text = "Иванов Иван Иванович";
+
+				if (textBox4.Text == "")
+					textBox4.Text = "Россия";
+
+				author.Init(textBox3.Text, day, month, year, textBox4.Text);
+			}
+
+			Publishing publishing = new();
+			if (checkBox2.Checked)
+			{
+				if (textBox6.Text == "")
+					textBox6.Text = "Издательство №1";
+
+				if (textBox7.Text == "")
+					textBox7.Text = "г. Москва";
+
+				publishing.Init(textBox6.Text, textBox7.Text);
+			}
+
+			if (textBox1.Text == "")
+				textBox1.Text = "Котофей";
+
+			if (textBox5.Text == "")
+				textBox5.Text = "Сказки";
+
+			if (maskedTextBox2.Text == "")
+				maskedTextBox2.Text = "50";
+
+			int pages_number;
+			try
+			{
+				pages_number = int.Parse(maskedTextBox2.Text);
+			}
+			catch (FormatException)
+			{
+				pages_number = 0;
+			}
+
+			if (maskedTextBox3.Text == "")
+				maskedTextBox3.Text = "2021";
+
+			int p_year;
+			try
+			{
+				p_year = int.Parse(maskedTextBox3.Text);
+			}
+			catch (FormatException)
+			{
+				p_year = 0;
 			}
 
 			if (radioButton2.Checked)
 			{
-				ForeignBook book = new(textBox2.Text);
+				
+				if (textBox2.Text == "")
+					textBox2.Text = "Английский";
+
+				ForeignBook fbook = new(textBox1.Text, author, pages_number, textBox5.Text, publishing, p_year, textBox2.Text);
+				Program.books.Add(fbook);
 			}
 			else
 			{
-				Book book = new();
+				Book book = new(textBox1.Text, author, pages_number, textBox5.Text, publishing, p_year);
+				Program.books.Add(book);
 			}
 		}
 	}
