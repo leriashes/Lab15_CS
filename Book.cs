@@ -48,6 +48,87 @@ namespace Lab15_CS
 			}
 		}
 
+		public int ID
+		{
+			get
+			{
+				return id;
+			}
+		}
+
+		public string Title
+		{
+			get
+			{
+				return title;
+			}
+		}
+
+		public string AboutAuthor
+		{
+			get
+			{
+				return author.About();
+			}
+		}
+
+		public string Genre
+		{
+			get
+			{
+				return genre;
+			}
+		}
+
+		public Reader Reader
+		{
+			get
+			{
+				return reader;
+			}
+
+			set
+			{
+				reader = value;
+				if (value != null)
+				{
+					borrow_date = Date.Today();
+				}
+			}
+		}
+
+		public int Publication_year
+		{
+			get
+			{
+				return publ_year;
+			}
+		}
+
+		public Publishing Publishing
+		{
+			get
+			{
+				return publishing;
+			}
+		}
+
+		public string Borrow_date
+		{
+			get
+			{
+				return borrow_date.ToString();
+			}
+		}
+
+		public int Pages_number
+		{
+			get
+			{
+				return pages_number;
+			}
+		}
+
 		public static bool BorrowBook(ref Book book, Reader reader, Date date)
 		{
 			bool result = false;

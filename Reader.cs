@@ -21,6 +21,14 @@ namespace Lab15_CS
 			}
 		}
 
+		public string Name
+		{
+			get
+			{
+				return full_name;
+			}
+		}
+
 		//Конструктор
 		public Reader()
 		{

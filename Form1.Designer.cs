@@ -75,6 +75,7 @@ namespace Lab15_CS
 			this.button_take_book.TabIndex = 3;
 			this.button_take_book.Text = "Выдача/приём ";
 			this.button_take_book.UseVisualStyleBackColor = true;
+			this.button_take_book.Click += new System.EventHandler(this.Button_take_book_Click);
 			// 
 			// button_game
 			// 

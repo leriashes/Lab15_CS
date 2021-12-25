@@ -35,5 +35,11 @@ namespace Lab15_CS
 			FormNewReader formNewReader = new();
 			formNewReader.ShowDialog();
 		}
+
+		private void Button_take_book_Click(object sender, EventArgs e)
+		{
+			FormTakeBook formTakeBook = new();
+			formTakeBook.Show();
+		}
 	}
 }
