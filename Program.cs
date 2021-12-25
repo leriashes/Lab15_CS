@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,6 +9,8 @@ namespace Lab15_CS
 {
 	static class Program
 	{
+		public static ArrayList readers;
+		public static ArrayList books;
 		/// <summary>
 		///  The main entry point for the application.
 		/// </summary>

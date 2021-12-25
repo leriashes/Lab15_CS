@@ -24,7 +24,8 @@ namespace Lab15_CS
 
 		private void button_new_book_Click(object sender, EventArgs e)
 		{
-			
+			FormNewBook formNewBook = new();
+			formNewBook.Show();
 		}
 	}
 }
