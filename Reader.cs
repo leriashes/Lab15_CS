@@ -13,6 +13,14 @@ namespace Lab15_CS
 
 		static Exception ex;
 
+		public string Doc_Number
+		{
+			get
+			{
+				return doc_number;
+			}
+		}
+
 		//Конструктор
 		public Reader()
 		{

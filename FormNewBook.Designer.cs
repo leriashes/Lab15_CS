@@ -350,6 +350,9 @@ namespace Lab15_CS
 			this.Controls.Add(this.label2);
 			this.Controls.Add(this.textBox1);
 			this.Controls.Add(this.label1);
+			this.MaximizeBox = false;
+			this.MaximumSize = new System.Drawing.Size(1503, 572);
+			this.MinimumSize = new System.Drawing.Size(1503, 572);
 			this.Name = "FormNewBook";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Добавление новой книги";

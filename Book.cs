@@ -321,11 +321,11 @@ namespace Lab15_CS
 		public override String ToString()
 		{
 			String result;
-			result = "ID " + id + "\nНазвание: \"" + title + "\"" + "\nЖанр: " + genre + "\nКоличество страниц: " + pages_number + "\nГод публикации: " + publ_year + "\nАвтор: " + author + "\nИздательство: " + publishing;
+			result = "ID " + id + " \nНазвание: \"" + title + "\"" + " \nЖанр: " + genre + " \nКоличество страниц: " + pages_number + " \nГод публикации: " + publ_year + " \nАвтор: " + author + " \nИздательство: " + publishing;
 
 			if (reader != null)
 			{
-				result += "\nЧитатель: " + reader + "\nДата взятия книги: " + borrow_date + "\nСрок сдачи книги: ";
+				result += " \nЧитатель: " + reader + " \nДата взятия книги: " + borrow_date + " \nСрок сдачи книги: ";
 				Date plus = new Date(time, 0, 0);
 				result += plus.Add(borrow_date);
 			}

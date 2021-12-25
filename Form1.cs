@@ -21,12 +21,19 @@ namespace Lab15_CS
 		private void Form1_Load(object sender, EventArgs e)
 		{
 			Program.books = new();
+			Program.readers = new();
 		}
 
 		private void Button_new_book_Click(object sender, EventArgs e)
 		{
 			FormNewBook formNewBook = new();
 			formNewBook.ShowDialog();
+		}
+
+		private void Button_new_reader_Click(object sender, EventArgs e)
+		{
+			FormNewReader formNewReader = new();
+			formNewReader.ShowDialog();
 		}
 	}
 }

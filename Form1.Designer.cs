@@ -65,6 +65,7 @@ namespace Lab15_CS
 			this.button_new_reader.TabIndex = 2;
 			this.button_new_reader.Text = "Новый читатель";
 			this.button_new_reader.UseVisualStyleBackColor = true;
+			this.button_new_reader.Click += new System.EventHandler(this.Button_new_reader_Click);
 			// 
 			// button_take_book
 			// 
@@ -95,6 +96,9 @@ namespace Lab15_CS
 			this.Controls.Add(this.button_new_reader);
 			this.Controls.Add(this.button_new_book);
 			this.Controls.Add(this.label1);
+			this.MaximizeBox = false;
+			this.MaximumSize = new System.Drawing.Size(1289, 356);
+			this.MinimumSize = new System.Drawing.Size(1289, 356);
 			this.Name = "Form1";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Библиотека";
